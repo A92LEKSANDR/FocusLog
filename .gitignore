@@ -1,0 +1,52 @@
+# Qt Creator build output
+build/
+*.pro.user
+*.pro.user.*
+*.qmake.stash
+*.qmake.cache
+*.qmlproject.user
+*.qmlproject.user.*
+*.qmake.*
+*.qbsbuild/
+
+# Compiled object files
+*.o
+*.obj
+
+# Compiled static libraries
+*.a
+*.lib
+
+# Compiled shared libraries
+*.so
+*.dll
+*.dylib
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# IDE-specific files
+*.suo
+*.ncb
+*.sdf
+*.vcxproj*
+*.vcproj*
+*.opensdf
+*.suo
+
+# Mac-specific files
+.DS_Store
+
+# Windows-specific files
+Thumbs.db
+Desktop.ini
+
+# Linux-specific files
+*~
+
+# Other
+*.swp
+*.swo
+
