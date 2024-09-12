@@ -30,24 +30,20 @@
     <property name="geometry">
      <rect>
       <x>-1</x>
-      <y>-1</y>
+      <y>39</y>
       <width>801</width>
-      <height>431</height>
+      <height>491</height>
      </rect>
     </property>
-    <layout class="QGridLayout" name="gridLayout">
-     <item row="0" column="0">
-      <widget class="QTextEdit" name="textEdit"/>
-     </item>
-    </layout>
+    <layout class="QGridLayout" name="gridLayout"/>
    </widget>
    <widget class="QWidget" name="gridLayoutWidget_2">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>510</y>
-      <width>801</width>
-      <height>51</height>
+      <x>10</x>
+      <y>540</y>
+      <width>781</width>
+      <height>31</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout_2">

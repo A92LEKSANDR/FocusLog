@@ -3,7 +3,7 @@
 TimerManager::TimerManager(QObject *parent) : QObject(parent), isWorkSession(true)
 {
     timer = new QTimer(this);
-    dbManager = new DatabaseManager();
+    //dbManager = new DatabaseManager();
 
     connect(timer, &QTimer::timeout, this, &TimerManager::onTimerFinished);
 }
@@ -24,14 +24,14 @@ void TimerManager::onTimerFinished()
 {
     if (isWorkSession) {
         // Записываем завершение сессии в базу данных
-        dbManager->logWorkSession(QDateTime::currentDateTime());
+        //dbManager->logWorkSession(QDateTime::currentDateTime());
         startBreakSession();  // Запуск перерыва
     } else {
         startWorkSession();   // Запуск новой рабочей сессии после перерыва
     }
 }
 
-void TimerManager::stopSession()
+void TimerManager::stopWorkSession()
 {
     timer->stop();
     // Здесь можно завершить работу, записать последние данные или завершить сессию

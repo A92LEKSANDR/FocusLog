@@ -17,7 +17,7 @@ signals:
 private:
     bool isWorkSession;
     QTimer* timer;
-    dataBaseManager* dbManager;
+    //DatabaseManager* dbManager;
 
 private slots:
     void onTimerFinished();
