@@ -4,7 +4,8 @@
 #include <QMainWindow>
 #include "TimerManager.h"
 #include "NotesDialog.h"
-#include "DatabaseManager.h"
+#include <QLabel>
+//#include "DatabaseManager.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -24,7 +25,8 @@ public:
     void on_stopButton_clicked();
 
 private:
-    Ui::MainWindow *ui;
+    Ui::MainWindow* ui;
+    QLabel* timeLabel;
     TimerManager* timerManager;
     NotesDialog notesDialog;
 };

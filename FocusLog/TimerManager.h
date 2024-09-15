@@ -12,11 +12,15 @@ public slots:
     void startWorkSession();
     void stopWorkSession();
     void startBreakSession();
+
+    void updateRemainingTime(); // Слот для обновления времени
 signals:
+    void timeUpdated(int remainingTime);
     void breaksSignal();
 private:
     bool isWorkSession;
     QTimer* timer;
+    int remainingTime;;
     //DatabaseManager* dbManager;
 
 private slots:
