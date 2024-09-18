@@ -100,7 +100,7 @@
      <item row="0" column="2">
       <widget class="QPushButton" name="pushButton">
        <property name="text">
-        <string>Закончит учится</string>
+        <string>Сессия off</string>
        </property>
       </widget>
      </item>
