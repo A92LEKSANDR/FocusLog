@@ -3,9 +3,8 @@
 
 #include <QMainWindow>
 #include "TimerManager.h"
-#include "NotesDialog.h"
 #include <QLabel>
-//#include "DatabaseManager.h"
+#include <QWidget>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -20,14 +19,12 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-
-    void on_startButton_clicked(); //25 min start
-    void on_stopButton_clicked();
+private slots:
+    void on_startButton_clicked();
+    void updateDisplayedTime(int remainingTime);
 
 private:
     Ui::MainWindow* ui;
-    QLabel* timeLabel;
     TimerManager* timerManager;
-    NotesDialog notesDialog;
 };
 #endif // MAINWINDOW_H

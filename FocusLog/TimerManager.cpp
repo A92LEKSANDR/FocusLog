@@ -1,9 +1,7 @@
 #include "TimerManager.h"
 
-TimerManager::TimerManager(QObject *parent) : QObject(parent),remainingTime(0), isWorkSession(true)
-{
+TimerManager::TimerManager(QObject *parent) : QObject(parent),remainingTime(0), isWorkSession(true){
     timer = new QTimer(this);
-    //dbManager = new DatabaseManager();
 
     connect(timer, &QTimer::timeout, this, &TimerManager::updateRemainingTime);
 }
@@ -39,12 +37,14 @@ void TimerManager::stopWorkSession()
     // Здесь можно завершить работу, записать последние данные или завершить сессию
 }
 
-void TimerManager::updateRemainingTime(){
-    if(remainingTime > 0){
+void TimerManager::updateRemainingTime()
+{
+    if (remainingTime > 0) {
         remainingTime -= 1000;
         emit timeUpdated(remainingTime);
-    }else{
+    } else {
         timer->stop();
-        isWorkSession = false;
+        onTimerFinished();
+        // Вызываем метод завершения таймера
     }
 }
